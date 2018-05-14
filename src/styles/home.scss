@@ -1,0 +1,50 @@
+@import 'variables.scss';
+
+.skill-home {
+	letter-spacing: 10px;
+	height: 100vh;
+}
+ul.logo-list{
+	height: 100vh;
+	li{
+		height: 20%;
+		font-size: 100%;
+		display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    font-size: 8em;
+	    color: $med-gray;
+	    font-family: 'Geometos';
+	    &.logo-img{
+	    	position: relative;
+	    	img{
+	    		height: 50%;
+	    	}
+	    	.ring-sm{
+	    		display: block;
+	    		position: absolute;
+	    		border-radius: 50%;
+	    		border: 1px solid red;
+	    		background: transparent;
+	    		height: 150px;
+	    		width: 150px;	
+
+				  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(red), to(transparent));
+				  background-image: -webkit-linear-gradient(red, transparent);
+				  background-image:
+				      -moz-linear-gradient(red, transparent),
+				      -moz-linear-gradient(red, transparent);
+				  background-image:
+				      -o-linear-gradient(red, transparent),
+				      -o-linear-gradient(red, transparent);
+				  background-image: 
+				      linear-gradient(red, transparent),
+				      linear-gradient(red, transparent);
+				  -moz-background-size: 3px 100%;
+				  background-size: 3px 100%;
+				  background-position: 0 0, 100% 0;
+				  background-repeat: no-repeat; 
+	    	}
+	    }
+	}
+}

@@ -1,0 +1,19 @@
+/*button*/
+.btn{
+  padding: 12px 22px;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+.btn-tranparent{
+	background-color: rgba(255,255,255,0);
+	color: #000;
+	border:1px solid $dark-gray;
+}
+
+.fb-btn{
+	color: white;
+	background-color: $fb-color;
+}

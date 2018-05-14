@@ -1,0 +1,17 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+header{
+	position: fixed;
+	padding: 18px 30px;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: white;
+	@include box-shadow;
+	vertical-align: middle;
+	.logo{
+		padding-top: 12px;
+		display: inline-block;
+	}
+}

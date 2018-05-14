@@ -1,0 +1,47 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+.card{
+	display: inline-block;
+	border-radius: 8px;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	@include box-shadow;
+	cursor: pointer;
+	.card-overlay{
+		position: absolute;
+		bottom: 0;
+		background-color: rgba(255, 255, 255, 0.8);
+		width: 100%;
+		left: 0;
+		height: 40px;
+		padding: 10px;
+		box-sizing: border-box;
+		color: #000;
+		text-align: center;
+		transition: all 0.2s ease-in-out;
+	}
+	&:hover{
+		.card-overlay{
+			height: 80px;
+		}
+	}
+	.card-title{
+		padding: 20px 15px;
+	}
+	.card-body{
+		padding: 20px 15px;
+		.list-vert{
+			margin-bottom: 15px;
+		}
+	}
+	.card-no-pad{
+		padding: 0;
+		max-height: 180px;
+		overflow: hidden;
+		img{
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,134 @@
+/*Import core styles*/
+
+@import './fonts.scss';
+@import './variables.scss';
+@import './grid.scss';
+@import './mixins.scss';
+@import './buttons.scss';
+@import './layout.scss';
+
+/*Global body-html styles*/
+
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #000;
+  color: white;
+}
+
+a{
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  li {
+    text-transform: none;
+    display: inline-block;
+    &:focus {
+      outline: none;
+    }
+  }
+  &.nav-list{
+    display: inline-block;
+    li{
+      display: inline-block;
+      margin-left: 20px;
+    }
+  }
+}
+
+a.light-link{
+  color: $blue-4;
+  &:hover{
+    color: $blue-1;
+  }
+}
+
+
+
+h1,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.light-text{
+  color: $dark-gray;
+}
+
+div {
+  word-wrap: break-word;
+}
+
+.left{
+  float: left;
+}
+
+.right{
+  float: right;
+}
+
+.center{
+  text-align: center;
+}
+
+.flex-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clear-fix{
+  clear: both;
+}
+
+button {
+  outline: none;
+  border: 0;
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+/*container*/
+.top-container{
+  padding-top: 100px;
+
+  } 
+
+.main-container{
+  padding: 120px 30px 20px 30px;
+}
+
+.container-up-down{
+  padding: 15px 0;
+}
+
+.container-left-right{
+  padding: 0 20px;
+}
