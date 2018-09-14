@@ -1,8 +1,32 @@
 @import 'variables.scss';
+@import 'mixins.scss';
+
+@keyframes inner{
+	    		0{
+	    			transform: scale(0,0);
+	    			opacity: 0
+	    		}
+	    		70%{
+	    			opacity: 1;
+	    		}
+	    		100%{
+	    			transform: scale(2, 2);
+	    			opacity: 0;
+	    			/*opacity: 0;*/
+
+	    		}
+	    	}
+
 
 .skill-home {
 	letter-spacing: 10px;
 	height: 100vh;
+	transition: all 0.4s ease-in-out;
+	cursor: pointer;
+	position: relative;
+	&:hover{
+		letter-spacing: 20px;
+	}
 }
 ul.logo-list{
 	height: 100vh;
@@ -17,33 +41,126 @@ ul.logo-list{
 	    font-family: 'Geometos';
 	    &.logo-img{
 	    	position: relative;
+	    	z-index: 2;
 	    	img{
 	    		height: 50%;
 	    	}
-	    	.ring-sm{
+	    	.ring-sm,
+	    	.ring-bg{
+	    		z-index: -1;
 	    		display: block;
 	    		position: absolute;
 	    		border-radius: 50%;
-	    		border: 1px solid red;
-	    		background: transparent;
-	    		height: 150px;
-	    		width: 150px;	
+	    		width: 40px;
+					height: 40px;
+	    		@include linear-multi-gradient-bg(#7461d7, #dfb478, #cc70d7, #000);
+	    		
+	    		animation: ring-anim 4s ease-in-out;
+	    		animation-iteration-count: infinite;
+	    		animation-timing-function: ease-in-out;
+				-webkit-animation-timing-function: ease-in-out;
+				
+				.ring-inner-sm,
+				.ring-inner-bg{
+					z-index: -1;
+					position: absolute;
+					width: 38px;
+					height: 38px;
+					background: #000;
+					border-radius: 50%;
+					top: 1px;
+					left: 1px;
+						
+					animation: ring-sm-anim 4s ease-in-out;
+					animation-iteration-count: infinite;
+					animation-timing-function: ease-in-out;
+					
+					-webkit-animation-timing-function: ease-in-out;
+				}
+	    	}
+	    	.ring-bg{
+	    		animation: ring-anim-bg 4s ease-in-out;
+	    		animation-delay: 2s;
+	    		animation-iteration-count: infinite;
+	    		animation-timing-function: ease-in-out;
+	    		width: 40px;
+					height: 40px;
+					opacity: 0;
+				-webkit-animation-timing-function: ease-in-out;
+	    		@include linear-multi-gradient-bg(#a9923e, #6fc9e8, #0040ff, #000);
+	    		.ring-inner-bg{
+	    		
+					animation: ring-bg-anim 4s ease-in-out;
+					animation-timing-function: ease-in-out;
+					width: 38px;
+					height: 38px;
+					-webkit-animation-timing-function: ease-in-out;
+					animation-iteration-count: infinite;
+					animation-delay: 2s;
+	    		}
+	    	}
+	    	@keyframes ring-anim{
+	    		0{
+	    			width: 40px;
+	    			height: 40px;
+	    			opacity: 1
+	    		}
+	    		50%{
+	    			opacity: 1;
+	    		}
+	    		100%{
+	    			width: 170px;
+	    			height: 170px;
+	    			opacity: 0;
+	    		}
+	    	}
+	    	@keyframes ring-sm-anim{
+	    		0{
+	    			width: 38px;
+	    			height: 38px;
+	    			opacity: 1
+	    		}
+	    		50%{
+	    			opacity: 1;
+	    		}
+	    		100%{
+	    			width: 168px;
+	    			height: 168px;
+	    			/*opacity: 0;*/
 
-				  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(red), to(transparent));
-				  background-image: -webkit-linear-gradient(red, transparent);
-				  background-image:
-				      -moz-linear-gradient(red, transparent),
-				      -moz-linear-gradient(red, transparent);
-				  background-image:
-				      -o-linear-gradient(red, transparent),
-				      -o-linear-gradient(red, transparent);
-				  background-image: 
-				      linear-gradient(red, transparent),
-				      linear-gradient(red, transparent);
-				  -moz-background-size: 3px 100%;
-				  background-size: 3px 100%;
-				  background-position: 0 0, 100% 0;
-				  background-repeat: no-repeat; 
+	    		}
+	    	}
+
+	    	@keyframes ring-anim-bg{
+	    		0{
+	    			width: 40px;
+	    			height: 40px;
+	    			opacity: 1
+	    		}
+	    		50%{
+	    			opacity: 1;
+	    		}
+	    		100%{
+	    			width: 170px;
+	    			height: 170px;
+	    			opacity: 0;
+	    		}
+	    	}
+	    	@keyframes ring-bg-anim{
+	    		0{
+	    			width: 38px;
+	    			height: 38px;
+	    			opacity: 1
+	    		}
+	    		50%{
+	    			opacity: 1;
+	    		}
+	    		100%{
+	    			width: 168px;
+	    			height: 168px;
+	    			/*opacity: 0;*/
+
+	    		}
 	    	}
 	    }
 	}
