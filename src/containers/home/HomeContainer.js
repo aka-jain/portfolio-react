@@ -97,6 +97,10 @@ class HomeContainer extends Component {
           </div>
            <div className="col-xs-12 col-sm-4">
            <div className="flex-center skill-home font-geo">
+
+              <div className="circle-fill">
+                {circles.map(this.renderCicle)}
+              </div>
             <h2>&lt;Development/&gt;</h2>
            </div>
           </div>
