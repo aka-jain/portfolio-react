@@ -97,7 +97,7 @@ class HomeContainer extends Component {
           </div>
            <div className="col-xs-12 col-sm-4">
            <div className="flex-center skill-home font-geo">
-            <h2>Development</h2>
+            <h2>&lt;Development/&gt;</h2>
            </div>
           </div>
         </div>
