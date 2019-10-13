@@ -13,7 +13,8 @@ class AppContainer extends Component {
     return (
       <div className="mb-container">
       <Switch>  
-	      <Route  path="/" component={findComponent(childRoutes,"HomeContainer")} />
+        <Route exact={true} path="/design" render={() => <div>Design Page</div>} />
+	      <Route path="/" component={findComponent(childRoutes,"HomeContainer")} />
       </Switch>
       </div>
       
